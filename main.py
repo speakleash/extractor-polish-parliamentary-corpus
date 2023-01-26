@@ -156,7 +156,7 @@ if __name__ == '__main__':
             shutil.copy(f, os.path.join(file_name_zst))
             file_size = os.path.getsize(file_name_zst)
 
-        #os.remove(f)
+        os.remove(f)
 
     manifest = {"project" : "SpeakLeash", "name": "The Polish Parliamentary Corpus", "description": "The Polish Parliamentary Corpus (PPC) is a large collection of documents from the proceedings of the Polish Parliament, Sejm and Senate, both plenary and committee sittings, interpellations and questions.", "license": "Public Domain", "language": "pl", "file_size" : file_size, "sources": [{"name": "The Polish Parliamentary Corpus", "url": "http://clip.ipipan.waw.pl/PPC", "license": "Public Domain"}], "stats": {"documents": total_docs, "sentences": total_sentences, "words" : total_words, "nouns" : total_nouns, "verbs" : total_verbs, "characters": total_len, "punctuations" : total_punctuations, "symbols" : total_symbols, "stopwords": total_stopwords}}
     json_manifest = json.dumps(manifest, indent = 4) 
